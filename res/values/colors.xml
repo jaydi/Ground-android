@@ -1,0 +1,25 @@
+<resources>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#1b252e</color>
+    <color name="double_black">#232222</color>
+    <color name="green">#16593D</color>
+    <color name="light_green">#0E6F49</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="dim">#CFCFCF</color>
+    <color name="dark">#808080</color>
+    <color name="text_gray">#4E585F</color>
+    <color name="background_dark">#B7B7B7</color>
+    <color name="background_dim">#E0E0E0</color>
+    <color name="background_light">#F0F0F0</color>
+    <color name="background_gray">#EAEAEA</color>
+    <color name="background_green">#1B3F2E</color>
+    <color name="button_dark">#484848</color>
+    <color name="button_border">#858585</color>
+    <color name="border_black">#1B252E</color>
+    <color name="border_dark">#D6D6D6</color>
+    <color name="actionBar_border">#12171A</color>
+
+</resources>

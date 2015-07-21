@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/PaddedWideScreenContainer"
+    android:background="@color/background_dim" >
+
+    <LinearLayout
+        style="@style/WideScreenContainer"
+        android:background="@drawable/background_post_item"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/WideScreenContainer"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/image_post_item_user_picture"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/user_picture"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/text_post_item_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:paddingLeft="5dp" />
+
+                <TextView
+                    android:id="@+id/text_post_item_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/text_post_item_content_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" />
+
+            <ImageView
+                android:id="@+id/image_post_item_content_picture"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/text_post_item_content_message"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:onClick="showPicture"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_post_item_content_picture"
+                android:background="@drawable/background_post_item_comment"
+                android:gravity="right|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/image_post_item_comment"
+                    android:layout_width="17dp"
+                    android:layout_height="14dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_comments" />
+
+                <TextView
+                    android:id="@+id/text_post_item_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="clickTest" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

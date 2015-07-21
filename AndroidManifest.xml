@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="anb.ground"
+    android:versionCode="12"
+    android:versionName="1.1.8" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="anb.ground.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="anb.ground.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="anb.ground.app.GlobalApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/menu_overflow"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <!-- For GCM -->
+        <receiver
+            android:name="anb.ground.receiver.GCMBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="anb.ground" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="anb.ground.GroundIntentService" />
+
+        <!-- Used for Google Play Store Campaign Measurement -->
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+
+        <receiver
+            android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Opening -->
+        <activity
+            android:name="anb.ground.activity.starting.LoadingActivity"
+            android:label="@string/title_loading_activity"
+            android:noHistory="true"
+            android:theme="@style/FullScreenTheme" >
+            <intent-filter>
+                <data
+                    android:host="startGround"
+                    android:scheme="anbGround" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="anb.ground.activity.starting.GuideActivity"
+            android:label="@string/title_activity_guide"
+            android:noHistory="true"
+            android:theme="@style/FullScreenTheme" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.starting.StartingActivity"
+            android:label="@string/title_starting_activity"
+            android:theme="@style/FullScreenTheme" >
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="anb.ground.activity.starting.NewPswdActivity"
+            android:label="@string/title_activity_pswd_search"
+            android:noHistory="true"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.starting.StartByEmailActivity"
+            android:label="@string/title_activity_start_by_email"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- New User -->
+        <activity
+            android:name="anb.ground.activity.action.user.EditProfileActivity"
+            android:label="@string/title_activity_edit_profile"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- Main Activities -->
+        <activity
+            android:name="anb.ground.activity.main.user.UserMainActivity"
+            android:label="@string/title_activity_user_main" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.main.team.TeamMainActivity"
+            android:label="@string/title_activity_team_main"
+            android:theme="@style/NoDim" >
+        </activity>
+
+        <!-- Team Functions -->
+        <activity
+            android:name="anb.ground.activity.action.user.RegisterTeamActivity"
+            android:label="@string/title_activity_register_team"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.board.PostActivity"
+            android:label="@string/title_activity_post"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.board.PostShowActivity"
+            android:label="@string/title_activity_show_post"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.match.MakeMatchActivity"
+            android:label="@string/title_activity_make_match"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.match.MatchSearchActivity"
+            android:label="@string/title_activity_match_search"
+            android:theme="@style/NoDim" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.match.MatchShowActivity"
+            android:label="@string/title_activity_match_show" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.match.MatchTeamInfoActivity"
+            android:label="@string/title_activity_match_team_info" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.manage.EditTeamProfileActivity"
+            android:label="@string/title_activity_edit_team_profile"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.manage.NewManagerActivity"
+            android:label="@string/title_activity_new_manager"
+            android:noHistory="true" >
+        </activity>
+
+        <!-- general functions -->
+
+        <activity
+            android:name="anb.ground.activity.action.GroundSearchActivity"
+            android:label="@string/title_activity_ground_search"
+            android:theme="@style/NoDim"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.TeamSearchActivity"
+            android:label="@string/title_activity_team_search"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.MapPointActivity"
+            android:label="@string/title_activity_map_point"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.IMActivity"
+            android:label="@string/title_activity_im"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.user.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.match.PushSurveyActivity"
+            android:label="@string/title_activity_push_survey" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.team.match.ShowRecordsActivity"
+            android:label="@string/title_activity_show_records"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.user.UserInvitationActivity"
+            android:label="@string/title_activity_team_invitation"
+            android:noHistory="true" >
+            <intent-filter>
+                <data
+                    android:host="showInvitation"
+                    android:scheme="anbGround" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="anb.ground.activity.action.user.PushSettingsActivity"
+            android:label="@string/title_activity_push_settings"
+            android:noHistory="true" >
+        </activity>
+    </application>
+
+</manifest>

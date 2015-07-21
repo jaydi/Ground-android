@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/anb.ground"
+    style="@style/PaddedWideScreenContainer"
+    android:background="@color/background_dim" >
+
+    <com.fsn.cauly.CaulyAdView
+        android:id="@+id/xmladview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:appcode="hwAwWPSZ"
+        app:bannerHeight="Proportional"
+        app:effect="None" />
+
+</FrameLayout>

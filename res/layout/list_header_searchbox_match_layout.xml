@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/WideScreenContainer"
+    android:orientation="vertical"
+    tools:context=".MatchSearchActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp" >
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_gray_bottom_border" >
+
+            <ImageView
+                android:id="@+id/image_match_search_refresh"
+                android:layout_width="39dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_button_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_refresh" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_gray_bottom_border"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp"
+            android:text="@string/manually_search_match"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/frame_match_search_toggle_searchbox"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_arrow_box"
+            android:clickable="true"
+            android:focusable="true" >
+
+            <ImageView
+                android:id="@+id/image_match_search_toggle_searchbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_navi_expand" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_match_search_searchbox"
+        style="@style/PaddedWideScreenContainer"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/background_list_item"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/text_match_search_date_range"
+            style="@style/InputBox"
+            android:onClick="getDateRange"
+            android:text="@string/date" />
+
+        <TextView
+            android:id="@+id/text_match_search_time_range"
+            style="@style/InputBox"
+            android:onClick="getTimeRange"
+            android:text="@string/time" />
+
+        <TextView
+            android:id="@+id/text_match_search_location_address"
+            style="@style/InputBox"
+            android:onClick="getLocation"
+            android:text="@string/location" />
+
+        <Button
+            android:id="@+id/button_match_search_search"
+            style="@style/StrongButton"
+            android:onClick="search"
+            android:text="@string/search" />
+    </LinearLayout>
+
+</LinearLayout>

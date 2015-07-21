@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullScreenContainer"
+    android:background="@color/background_dim"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity" >
+
+    <TextView
+        style="@style/ListItem"
+        android:onClick="editProfile"
+        android:text="@string/user_info" />
+
+    <!--
+         <TextView
+		style="@style/ListItem"
+        android:onClick="feedSettings"
+        android:text="@string/feed_settings" />
+    -->
+
+    <TextView
+        style="@style/ListItem"
+        android:onClick="pushSettings"
+        android:text="@string/push_settings" />
+
+    <TextView
+        style="@style/ListItem"
+        android:onClick="logout"
+        android:text="@string/logout" />
+
+</LinearLayout>

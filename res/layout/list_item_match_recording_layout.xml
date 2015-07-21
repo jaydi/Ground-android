@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/selector_match_recording"
+    android:baselineAligned="false"
+    android:padding="12dp" >
+
+    <LinearLayout
+        style="@style/MatchTimeInfoBox"
+        android:background="@drawable/background_match_date_recording" >
+
+        <TextView
+            android:id="@+id/text_match_day_recording"
+            style="@style/MatchTimeInfoDay"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/text_match_date_recording"
+            style="@style/MatchTimeInfoDate"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/MatchInfoBox"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                style="@style/MatchInfoIcon"
+                android:src="@drawable/ic_match_opponent_gray" />
+
+            <TextView
+                android:id="@+id/text_match_opponent_recording"
+                style="@style/MatchInfoText"
+                android:textColor="@color/text_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                style="@style/MatchInfoIcon"
+                android:src="@drawable/ic_match_location_gray" />
+
+            <TextView
+                android:id="@+id/text_match_location_recording"
+                style="@style/MatchInfoText"
+                android:textColor="@color/text_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical|right"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_match_recording" />
+
+</LinearLayout>

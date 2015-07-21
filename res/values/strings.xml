@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Alert -->
+    <string name="alert_wrong_email">이메일 주소를 정확히 입력해주세요</string>
+    <string name="alert_wrong_password">비밀번호를 정확히 입력해주세요</string>
+    <string name="alert_short_password">비밀번호 7자 이상이어야 합니다</string>
+    <string name="alert_wrong_confirm_password">비밀번호를 다시 확인해주세요</string>
+    <string name="alert_current_location_failed">현위지 정보를 사용할 수 없어요</string>
+    <string name="alert_empty_image">이미지 파일을 찾을 수 없어요</string>
+    <string name="alert_empty_location">위치 정보를 입력해주세요</string>
+    <string name="alert_empty_team_id">팀 설정 오류가 발생했어요ㅠㅠ\n재로그인 후 다시 시도해주세요</string>
+    <string name="alert_empty_message">내용을 입력해주세요</string>
+    <string name="alert_empty_session_key">서버와의 연결에 실패했어요ㅠㅠ\n다시 로그인해주세요</string>
+    <string name="alert_empty_date">날짜를 입력해주세요</string>
+    <string name="alert_empty_time">시간을 입력해주세요</string>
+    <string name="alert_my_team_match">우리 팀 경기에요</string>
+    <string name="alert_wrong_phone">정확한 번호를 입력해주세요</string>
+    <string name="alert_wrong_match_access">권한이 없거나 삭제된 경기입니다</string>
+    <string name="alert_empty_comment">댓글을 입력해주세요</string>
+    <string name="alert_server_disconnected">서버와의 연결이 끊어졌습니다</string>
+    <string name="alert_network_error">네트워크와의 연결이 끊어졌습니다</string>
+    <string name="alert_is_our_team">우리 팀입니다</string>
+    <string name="alert_empty_poi">화면을 탭해서 위치를 선택하세요</string>
+    <string name="alert_wrong_time_range">시작시간이 종료시간보다 빨라야합니다</string>
+    <string name="alert_wrong_date_range">시작일이 종료일보다 빨라야합니다</string>
+    <string name="alert_already_a_member">이미 가입한 팀입니다</string>
+    <string name="alert_empty_name">이름은 꼭 입력해주세요</string>
+    <string name="alert_empty_phone">연락처를 입력해주세요</string>
+    <string name="alert_empty_team_name">팀 이름을 입력해주세요</string>
+    <string name="alert_expired_date">이미 지나간 날짜입니다!</string>
+    <string name="alert_expired_time">이미 지나간 시간입니다!</string>
+    <string name="alert_expired_endtime">종료시간이 시작시간보다 늦어야 합니다!</string>
+    <string name="alert_empty_match_time">경기 날짜/시간을 입력해주세요</string>
+    <string name="alert_empty_ground">경기장을 입력해주세요</string>
+    <string name="alert_no_manager">최소 1명의 매니져는 있어야합니다.</string>
+
+    <!-- Guide -->
+    <string name="guide_team_board">아직 글이 없습니다</string>
+    <string name="guide_team_match_settled">완성된 경기가 없습니다</string>
+    <string name="guide_team_match_unsettled">매칭중인 경기가 없습니다</string>
+    <string name="guide_invite_members">팀원들을\n초대해보세요!</string>
+    <string name="guide_no_results">검색결과가 없습니다</string>
+
+    <!-- Feed -->
+    <string name="feed_message_guide">Ground에 오신 것을 환영합니다!\n\n아직 팀을 못 찾으셨나요?\n왼쪽 위의 메뉴버튼을 눌러서\n주변의 팀을 찾거나, 직접 팀을 만들어보세요!</string>
+    <string name="feed_message_join_team" formatted="false">%s님이 %s에서 함께 뛰고 싶어합니다</string>
+    <string name="feed_message_accept_member" formatted="false">%s님이 %s에 합류했습니다!</string>
+    <string name="feed_message_deny_member" formatted="false">%s에서 %s님의 가입을 거절했습니다</string>
+    <string name="feed_message_deny_team" formatted="false">%s님이 %s의 초대를 거절했습니다</string>
+    <string name="feed_message_leave_team" formatted="false">%s님이 %s에서 나갔습니다!</string>
+    <string name="feed_message_request_match" formatted="false">%s에서 경기요청을 보냈습니다</string>
+    <string name="feed_message_invite_team" formatted="false">%s에서 경기에 초대합니다</string>
+    <string name="feed_message_matching_completed" formatted="false">경기 매칭이 완료되었습니다</string>
+    <string name="feed_message_deny_match" formatted="false">%s에서 경기 요청을 거절했습니다</string>
+    <string name="feed_message_do_survey" formatted="false">새로운 경기에서 참가조사를 시작합니다</string>
+    <string name="feed_message_set_score" formatted="false">경기 결과를 입력하세요</string>
+    <string name="feed_message_accept_score" formatted="false">경기 결과를 확인해주세요</string>
+    <string name="feed_message_score_completed" formatted="false">경기 결과가 입력되었습니다</string>
+
+    <!-- Label -->
+    <string name="app_name">Ground</string>
+    <string name="app_id">574552342583289</string>
+    <string name="action_confirm">확인</string>
+    <string name="close">닫기</string>
+    <string name="logout">로그아웃</string>
+    <string name="user_info">개인 정보</string>
+    <string name="settings">설정</string>
+    <string name="feed_settings">피드 설정</string>
+    <string name="push_settings">푸시 설정</string>
+    <string name="send">전송</string>
+    <string name="from_hour">시 부터</string>
+    <string name="to_hour">시 까지</string>
+    <string name="from">부터</string>
+    <string name="to">까지</string>
+    <string name="radius">반경</string>
+    <string name="retire">팀 탈퇴</string>
+    <string name="requisite">필수 입력</string>
+    <string name="optional">추가 입력</string>
+    <string name="confirm">확인</string>
+    <string name="location">지역</string>
+    <string name="current_location">현재 위치</string>
+    <string name="ground">경기 장소</string>
+    <string name="select">선택</string>
+    <string name="select_all">전체 선택</string>
+    <string name="colon">:</string>
+    <string name="tilda">~</string>
+    <string name="empty_phonenumber">(번호 없음)</string>
+    <string name="empty_info">정보 없음</string>
+    <string name="action_request">신청</string>
+    <string name="teams_nearby">내 주변 팀</string>
+    <string name="new_user">친구 초대</string>
+
+    <!-- start page -->
+    <string name="title_loading_activity">Ground</string>
+    <string name="title_starting_activity"></string>
+    <string name="title_activity_start_by_email"></string>
+    <string name="email">your_email@host.com</string>
+    <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="login">로그인</string>
+    <string name="sign_up">가입</string>
+    <string name="next_step">다음 단계로</string>
+    <string name="terms_agree_guide">약관에 동의하면\n다음 단계에서 가입을 완료합니다</string>
+    <string name="show_terms">약관 보기</string>
+    <string name="agree_terms">약관에 동의합니다</string>
+    <string name="forgot_user_info">로그인 정보를 잊었어요!</string>
+
+    <!-- frame -->
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+    <string name="my_teams">나의 팀</string>
+    <string name="my_actions">앱</string>
+    <string name="make_team">팀 만들기</string>
+    <string name="search_team">팀 검색</string>
+
+    <!-- password search activity -->
+    <string name="title_activity_pswd_search"></string>
+    <string name="pswd_search">가입할 때 사용한 email 주소로 링크를 전송합니다\n링크를 확인한 후에 비밀번호를 갱신할 수 있습니다</string>
+    <string name="send_pswd">링크 전송</string>
+    <string name="new_pswd_sent">메일주소로 링크를 전송했습니다</string>
+
+    <!-- user edit profile activity -->
+    <string name="title_activity_edit_profile">개인 정보</string>
+    <string name="profile_picture">사진</string>
+    <string name="name">이름</string>
+    <string name="birth_year">출생년도</string>
+    <string name="position">포지션</string>
+    <string name="physical">신체</string>
+    <string name="height">cm</string>
+    <string name="weight">kg</string>
+    <string name="main_foot">주발</string>
+    <string name="left_foot">왼발</string>
+    <string name="right_foot">오른발</string>
+    <string name="both_foot">양발</string>
+    <string name="user_location">거주지역</string>
+    <string name="occupation">직업</string>
+    <string name="phone_number">연락처</string>
+    <string name="phone">Mobile</string>
+    <string name="register_player">선수 등록</string>
+
+    <!-- frame action bar -->
+    <string name="action_settings">설정</string>
+    <string name="action_team_select">팀</string>
+    <string name="action_news_feed">새 소식</string>
+
+    <!-- user main activity -->
+    <string name="title_activity_user_main">나의 소식들</string>
+    <string name="title_news_feed">나의 소식들</string>
+    <string name="title_news_calendar">달력</string>
+
+    <!-- team register activity -->
+    <string name="title_activity_register_team">새로운 팀</string>
+    <string name="team_name">팀 이름</string>
+    <string name="team_location">팀 활동 지역</string>
+
+    <!-- team main activity -->
+    <string name="title_activity_team_main"></string>
+    <string name="action_write">글쓰기</string>
+    <string name="action_new_match">새 경기</string>
+    <string name="action_team_settings">팀 설정</string>
+    <string name="team_menu_board">게시판</string>
+    <string name="team_menu_info">관리</string>
+    <string name="team_menu_match">내 경기</string>
+    <string name="team_menu_match_search">주변 경기</string>
+    <string name="members">팀원</string>
+    <string name="stats">기록</string>
+    <string name="tickets">요청권</string>
+    <string name="shops">용품</string>
+
+    <!-- team board fragment -->
+    <string name="comment">댓글</string>
+
+    <!-- post Activity -->
+    <string name="title_activity_post">글쓰기</string>
+    <string name="action_post">작성</string>
+    <string name="post_hint">무슨 말을 하고 싶으신가요?</string>
+    <string name="album">앨범</string>
+    <string name="capture">캡쳐</string>
+    <string name="cancel">취소</string>
+    <string name="is_notice">공지</string>
+    <string name="user_picture">사진</string>
+    <string name="post_image">글사진</string>
+    <string name="confirm_remove_post">이 글을 삭제하시겠습니까?</string>
+
+    <!-- notice list activity -->
+    <string name="title_activity_officials">전체 공지</string>
+
+    <!-- team match fragment -->
+    <string name="settled_matches">완성</string>
+    <string name="unsettled_matches">매칭중</string>
+    <string name="match_record_needed">결과입력</string>
+    <string name="match_permission_needed">결과승인</string>
+    <string name="match_permission_waiting">승인요청중</string>
+    <string name="match_win">승</string>
+    <string name="match_lose">패</string>
+    <string name="match_draw">무</string>
+    <string name="simple_home_header">홈</string>
+    <string name="simple_away_header">어웨이</string>
+    <string name="request_none">상대없음</string>
+    <string name="request_yes">수락대기중</string>
+    <string name="request_no">요청들어옴</string>
+    <string name="no_opponent">(상대없음)</string>
+    <string name="record_match">결과 입력</string>
+    <string name="unset_home_match">Home</string>
+    <string name="unset_away_match">Away</string>
+
+    <!-- team info fragment -->
+    <string name="new_manager">매니져 변경</string>
+    <string name="send_invitation_kakao">카카오 초대</string>
+
+    <!-- make match activity -->
+    <string name="title_activity_make_match">경기 만들기</string>
+    <string name="action_make_match">완료</string>
+    <string name="make_match_date">날짜</string>
+    <string name="make_match_time">시간</string>
+    <string name="make_match_location">장소</string>
+    <string name="make_match_opponent">상대팀</string>
+    <string name="make_match_description">경기설명</string>
+    <string name="hided_match">비공개 경기</string>
+    <string name="set_match_start_time">시작 시간 설정</string>
+    <string name="set_match_end_time">종료 시간 설정</string>
+    <string name="options">선택사항</string>
+    <string name="check_if_private_match">비공개 경기일 경우 체크하세요</string>
+
+    <!-- ground search activity -->
+    <string name="title_activity_ground_search">운동장 검색</string>
+    <string name="ground_search">검색할 운동장을 입력하세요</string>
+    <string name="simple_reserved_grounds_header">예약된 운동장</string>
+    <string name="new_ground">+ 새로운 운동장</string>
+    <string name="new_ground_description">목록에 없는 경기장을 추가하기</string>
+    <string name="use_here">여기로!</string>
+
+    <!-- map point activity -->
+    <string name="title_activity_map_point">지도</string>
+    <string name="dialog_grond_name_title">운동장 이름</string>
+    <string name="dialog_positive_button">확인</string>
+    <string name="dialog_negative_button">취소</string>
+
+    <!-- team search activity -->
+    <string name="title_activity_team_search">팀 검색</string>
+    <string name="team_search">팀 이름으로 검색하세요</string>
+    <string name="join_team">가입신청</string>
+    <string name="join_team_notice">가입 신청이 전송되었어요</string>
+
+    <!-- post show activity -->
+    <string name="title_activity_show_post">댓글 보기/달기</string>
+    <string name="input_comment">댓글을 입력하세요</string>
+
+    <!-- match show activity -->
+    <string name="title_activity_match_show">경기정보</string>
+    <string name="versus">vs</string>
+    <string name="join">참가</string>
+    <string name="not_join">불참</string>
+    <string name="not_yet">미정</string>
+    <string name="start_survey">우리팀 참가 조사</string>
+    <string name="chatting">채팅</string>
+    <string name="accept">수락</string>
+    <string name="reject">거절</string>
+    <string name="cancel_request">요청 취소</string>
+    <string name="adjust">수정</string>
+    <string name="send_record">기록 보내기</string>
+    <string name="sent_record">인증 요청중</string>
+    <string name="im_in">참가 (눌러서 변경하기)</string>
+    <string name="im_not_in">불참 (눌러서 변경하기)</string>
+    <string name="sent_join_yes">참가한다고 알렸습니다</string>
+    <string name="sent_join_no">불참한다고 알렸습니다</string>
+
+    <!-- match team info activity -->
+    <string name="title_activity_match_team_info">참가 팀 정보</string>
+    <string name="demand_response">미응답자에게 응답 독촉하기!</string>
+    <string name="show_records">최근 경기 결과 보기</string>
+    <string name="sent_push_survey">참가조사를 보냈습니다</string>
+
+    <!-- match search activity -->
+    <string name="title_activity_match_search">경기검색</string>
+    <string name="search">검색</string>
+    <string name="date">날짜</string>
+    <string name="time">시간</string>
+    <string name="sent_match_request">경기 요청을 보냈어요</string>
+
+    <!-- edit team profile activity -->
+    <string name="title_activity_edit_team_profile">팀 정보 수정</string>
+
+    <!-- team members activity -->
+    <string name="title_activity_team_members">멤버들</string>
+    <string name="wannabe">가입 신청자</string>
+    <string name="manager">매니저</string>
+    <string name="normal">팀원</string>
+    <string name="later">나중에</string>
+
+    <!-- new manager activity -->
+    <string name="title_activity_new_manager">매니저 추가/삭제</string>
+    <string name="team_member">팀원</string>
+
+    <!-- user settings activity -->
+    <string name="title_activity_user_settings">개인 설정</string>
+    <string name="edit_profile">정보 수정하기</string>
+
+    <!-- notification -->
+    <string name="ground_notification">Ground에서 알림</string>
+    <string name="push_survey_message">새로운 경기에 참가하시겠습니까?</string>
+    <string name="push_survey_immidiate_message">경기 참가여부를 답해주세요!</string>
+    <string name="push_request_message">경기요청이 들어왔습니다</string>
+    <string name="push_invite_message">경기초대가 들어왔습니다</string>
+    <string name="push_deny_message" formatted="false">%s에서 경기를 거절했습니다</string>
+    <string name="push_matching_completed_message">경기가 성사되었습니다!</string>
+
+    <!-- remain -->
+    <string name="title_activity_im">채팅</string>
+    <string name="title_activity_settings">설정</string>
+    <string name="title_activity_push_survey">미응답자 독촉</string>
+    <string name="title_activity_show_records">최근 경기 결과</string>
+    <string name="title_activity_team_invitation">스카웃</string>
+    <string name="title_activity_push_settings">푸시 설정</string>
+    <string name="push_permission">푸시 알림 받기</string>
+    <string name="push_toast_permission">푸시 알림창 띄우기</string>
+    <string name="push_vibration_permission">푸시 알림 진동</string>
+    <string name="remove">삭제</string>
+    <string name="divider"> | </string>
+    <string name="news_feed">News Feed</string>
+    <string name="team_invitaion">%s 에서 함께 뛰어요!</string>
+    <string name="team_invitation_message">이 팀에서 함께 뛰시겠습니까?</string>
+    <string name="accept_team">네, 입단하겠습니다</string>
+    <string name="manually_search_match">직접 경기 검색하기</string>
+    <string name="title_activity_terms">TermsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_im_container"
+    style="@style/FullScreenContainer"
+    android:background="@color/background_dim"
+    android:orientation="vertical"
+    tools:context=".IMActivity" >
+
+    <ListView
+        android:id="@+id/list_im_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_light" >
+
+        <EditText
+            android:id="@+id/edit_im_message"
+            style="@style/InputBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:inputType="textMultiLine"
+            android:maxHeight="90dp"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top"
+            android:layout_margin="3dp"
+            android:background="@drawable/background_small_button"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:includeFontPadding="false"
+            android:onClick="sendMessage"
+            android:text="@string/send"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

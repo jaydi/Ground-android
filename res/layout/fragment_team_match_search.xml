@@ -1,0 +1,7 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_search_match_lists"
+    style="@style/WideScreenContainer"
+    android:divider="@null"
+    android:dividerPadding="0dp"
+    tools:context=".MatchSearchActivity" />

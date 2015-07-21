@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ButtonStyle" severity="ignore">
+        <ignore path="res/layout/toast_push_survey_layout.xml" />
+    </issue>
+    <issue id="ContentDescription" severity="ignore">
+        <ignore path="res/layout/activity_starting.xml" />
+        <ignore path="res/layout/fragment_login.xml" />
+        <ignore path="res/layout/fragment_sign_up.xml" />
+    </issue>
+    <issue id="ExportedReceiver">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+    <issue id="MissingTranslation" severity="ignore" />
+    <issue id="NestedWeights" severity="ignore">
+        <ignore path="res/layout/activity_edit_profile.xml" />
+        <ignore path="res/layout/activity_register_team.xml" />
+    </issue>
+    <issue id="NewApi" severity="ignore" />
+    <issue id="OldTargetApi">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+    <issue id="SimpleDateFormat">
+        <ignore path="src/anb/ground/models/Match.java" />
+        <ignore path="src/anb/ground/models/Post.java" />
+    </issue>
+    <issue id="SmallSp" severity="ignore">
+        <ignore path="res/layout/list_item_match_recording_layout.xml" />
+    </issue>
+    <issue id="Suspicious0dp" severity="ignore">
+        <ignore path="res/layout/list_item_match_unset_home_layout.xml" />
+        <ignore path="res/layout/list_item_match_upcoming_layout.xml" />
+    </issue>
+    <issue id="TextFields" severity="ignore" />
+    <issue id="UseCompoundDrawables" severity="ignore">
+        <ignore path="res/layout/activity_match_team_info.xml" />
+        <ignore path="res/layout/activity_show_post.xml" />
+        <ignore path="res/layout/activity_team_main.xml" />
+        <ignore path="res/layout/activity_user_settings.xml" />
+        <ignore path="res/layout/fragment_team_manage.xml" />
+        <ignore path="res/layout/simple_team_info_layout.xml" />
+        <ignore path="res/layout/team_member_list_item_layout.xml" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout/activity_guide.xml" />
+        <ignore path="res/layout/list_item_imessage_mine_layout.xml" />
+    </issue>
+</lint>

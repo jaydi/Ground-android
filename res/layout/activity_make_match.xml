@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullScreenContainer"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/PaddedWideScreenContainer"
+        android:orientation="vertical"
+        tools:context=".MakeMatchActivity" >
+
+        <TextView
+            android:id="@+id/text_view_match_date"
+            style="@style/InputBox"
+            android:onClick="getDate"
+            android:text="@string/make_match_date" />
+
+        <TextView
+            android:id="@+id/text_view_match_time"
+            style="@style/InputBox"
+            android:onClick="getTime"
+            android:text="@string/make_match_time" />
+
+        <TextView
+            android:id="@+id/text_view_match_location"
+            style="@style/InputBox"
+            android:onClick="getLocation"
+            android:text="@string/make_match_location" />
+
+        <FrameLayout
+            android:id="@+id/match_location_map"
+            style="@style/InputMap" >
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/PaddedFullScreenContainer"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background_dim"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/WideScreenContainer"
+            android:text="@string/options" />
+
+        <TextView
+            android:id="@+id/text_view_match_opponent"
+            style="@style/InputBox"
+            android:onClick="getOpponent"
+            android:text="@string/make_match_opponent" />
+
+        <EditText
+            android:id="@+id/edit_text_match_description"
+            style="@style/InputBox"
+            android:layout_height="wrap_content"
+            android:hint="@string/make_match_description"
+            android:inputType="textMultiLine"
+            android:maxHeight="72dp"
+            android:minHeight="36dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="7dp" >
+
+            <ImageView
+                android:id="@+id/image_make_match_private_match"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:clickable="true"
+                android:onClick="toggleOpen"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_checkbox_not_checked" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/check_if_private_match" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

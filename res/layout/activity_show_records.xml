@@ -1,0 +1,7 @@
+<com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_show_records_history"
+    style="@style/WideScreenContainer"
+    android:divider="@null"
+    android:dividerPadding="0dp"
+    tools:context=".ShowRecordsActivity" />

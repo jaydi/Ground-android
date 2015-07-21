@@ -1,0 +1,140 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/PaddedFullScreenContainer"
+    android:background="@color/background_light" >
+
+    <LinearLayout
+        style="@style/FullScreenContainer"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/image_edit_profile_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="11dp"
+            android:clickable="true"
+            android:contentDescription="@string/cancel"
+            android:onClick="getImage"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:paddingLeft="2dp"
+                android:text="@string/requisite"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_text_edit_profile_name"
+            style="@style/InputBoxWhite"
+            android:hint="@string/name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/edit_text_edit_profile_phone"
+            style="@style/InputBoxWhite"
+            android:hint="@string/phone"
+            android:inputType="phone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:paddingLeft="2dp"
+                android:text="@string/optional"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/text_edit_profile_birth_year"
+                style="@style/InputBoxWhite"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="getBirthYear"
+                android:text="@string/birth_year" />
+
+            <TextView
+                android:id="@+id/text_edit_profile_position"
+                style="@style/InputBoxWhite"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="getPosition"
+                android:text="@string/position" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/text_edit_profile_physical"
+                style="@style/InputBoxWhite"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="getPhysical"
+                android:text="@string/physical" />
+
+            <TextView
+                android:id="@+id/text_edit_profile_main_foot"
+                style="@style/InputBoxWhite"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="getMainFoot"
+                android:text="@string/main_foot" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_edit_profile_location"
+            style="@style/InputBoxWhite"
+            android:onClick="getLocation"
+            android:text="@string/user_location" />
+
+        <TextView
+            android:id="@+id/text_edit_profile_occupation"
+            style="@style/InputBoxWhite"
+            android:onClick="getOccupation"
+            android:text="@string/occupation" />
+
+        <TextView
+            style="@style/BasicButton"
+            android:layout_marginTop="14dp"
+            android:onClick="confirm"
+            android:text="@string/register_player" />
+    </LinearLayout>
+
+</ScrollView>

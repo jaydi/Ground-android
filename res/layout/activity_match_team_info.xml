@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullScreenContainer"
+    android:background="@color/background_light"
+    android:orientation="vertical"
+    tools:context=".MatchTeamInfoActivity" >
+
+    <ListView
+        android:id="@+id/list_match_team_info_members"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+    <FrameLayout
+        android:id="@+id/frame_match_team_info_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp" >
+
+        <Button
+            android:id="@+id/button_match_team_info_action"
+            style="@style/StrongButton" />
+    </FrameLayout>
+
+</LinearLayout>

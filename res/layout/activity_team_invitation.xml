@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullScreenContainer"
+    android:background="@color/background_dim"
+    android:orientation="vertical"
+    tools:context=".UserInvitationActivity" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_team_info" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp" >
+
+            <FrameLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp" >
+
+                <ImageView
+                    android:id="@+id/image_team_member_header_team_info_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/foreground_circle_border_full" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_team_member_header_team_info_info"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:text="@string/team_invitation_message" />
+
+    <Button
+        style="@style/StrongButton"
+        android:layout_width="200dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="acceptTeam"
+        android:text="@string/accept_team" />
+
+</LinearLayout>

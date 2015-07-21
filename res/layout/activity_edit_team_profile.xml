@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/PaddedFullScreenContainer"
+    android:background="@color/background_gray"
+    android:orientation="vertical"
+    tools:context=".RegisterTeamActivitye" >
+
+    <ImageView
+        android:id="@+id/image_edit_team_profile_picture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_margin="5dp"
+        android:onClick="getImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add_user" />
+
+    <TextView
+        android:id="@+id/text_edit_team_profile_team_name"
+        style="@style/InputBox" />
+
+    <TextView
+        android:id="@+id/text_edit_team_profile_location"
+        style="@style/InputBox"
+        android:onClick="getTeamLocation"
+        android:text="@string/team_location" />
+
+    <FrameLayout
+        android:id="@+id/frame_edit_team_profile_location_map"
+        style="@style/InputMap" />
+
+</LinearLayout>

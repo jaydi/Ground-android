@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullScreenContainer"
+    android:orientation="vertical"
+    tools:context=".GroundSearchActivity" >
+
+    <EditText
+        android:id="@+id/edit_text_ground_search"
+        style="@style/SearchBox"
+        android:hint="@string/ground_search"
+        android:inputType="textAutoComplete" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background_light" >
+
+        <ListView
+            android:id="@+id/list_reserved_ground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/list_searched_ground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+    </FrameLayout>
+
+</LinearLayout>

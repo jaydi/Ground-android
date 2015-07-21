@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullScreenContainer"
+    android:background="@color/background_dim"
+    android:orientation="vertical"
+    tools:context=".PushSettingsActivity" >
+
+    <LinearLayout
+        style="@style/ListItem"
+        android:clickable="false" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/push_permission"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/image_push_settings_togglePush"
+            android:layout_width="80dp"
+            android:layout_height="22dp"
+            android:clickable="true"
+            android:onClick="togglePushAllowance"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_push_settings_toast"
+        style="@style/ListItem"
+        android:clickable="false" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/push_toast_permission"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/image_push_settings_toggleToast"
+            android:layout_width="80dp"
+            android:layout_height="22dp"
+            android:clickable="true"
+            android:onClick="togglePushToastAllowance"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_push_settings_vibration"
+        style="@style/ListItem"
+        android:clickable="false" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/push_vibration_permission"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/image_push_settings_toggleVibration"
+            android:layout_width="80dp"
+            android:layout_height="22dp"
+            android:clickable="true"
+            android:onClick="togglePushVibrationAllowance"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+</LinearLayout>

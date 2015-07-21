@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout style="@style/MemberGridBox" >
+
+        <ImageView
+            style="@style/MemberGridBoxImage"
+            android:tag="image_team_member_grid_picture_0" />
+
+        <TextView
+            style="@style/MemberGridBoxName"
+            android:tag="text_team_member_grid_name_0" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/MemberGridBox" >
+
+        <ImageView
+            style="@style/MemberGridBoxImage"
+            android:tag="image_team_member_grid_picture_1" />
+
+        <TextView
+            style="@style/MemberGridBoxName"
+            android:tag="text_team_member_grid_name_1" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/MemberGridBox" >
+
+        <ImageView
+            style="@style/MemberGridBoxImage"
+            android:tag="image_team_member_grid_picture_2" />
+
+        <TextView
+            style="@style/MemberGridBoxName"
+            android:tag="text_team_member_grid_name_2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/MemberGridBox" >
+
+        <ImageView
+            style="@style/MemberGridBoxImage"
+            android:tag="image_team_member_grid_picture_3" />
+
+        <TextView
+            style="@style/MemberGridBoxName"
+            android:tag="text_team_member_grid_name_3" />
+    </LinearLayout>
+
+</LinearLayout>

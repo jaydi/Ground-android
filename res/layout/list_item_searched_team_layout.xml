@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/selector_searched_item"
+    android:paddingBottom="6dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="6dp" >
+
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/image_searched_team_emblem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_team" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/foreground_circle_border_48dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_searched_team_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textSize="22sp" />
+
+</LinearLayout>

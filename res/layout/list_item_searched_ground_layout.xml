@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/selector_searched_item"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_height="60dp" >
+	
+    <TextView
+        android:id="@+id/text_searched_ground_name"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:paddingLeft="10dp"
+        android:textSize="22sp"
+        android:gravity="center_vertical" />
+    
+    <TextView
+        android:id="@+id/text_searched_ground_address"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:paddingLeft="10dp"
+		android:textColor="@color/gray"
+        android:gravity="center_vertical" />
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/PaddedFullScreenContainer"
+    android:orientation="vertical"
+    tools:context="anb.ground.activity.LoginFragment" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            style="@style/DoorImageEmail"
+            android:src="@drawable/ic_email" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edit_login_email"
+        style="@style/EditText"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edit_login_password"
+        style="@style/EditText"
+        android:hint="@string/password"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/button_login_login"
+        style="@style/BasicButton"
+        android:layout_marginTop="25dp"
+        android:onClick="clickLogin"
+        android:text="@string/login" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:onClick="forgotUserInfo"
+            android:text="@string/forgot_user_info" />
+    </FrameLayout>
+
+</LinearLayout>

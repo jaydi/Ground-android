@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/background_matches_bar"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/text_team_match_settled_matches"
+                android:layout_width="115dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/background_matches_set_selected"
+                android:clickable="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="toggleMatchShow"
+                android:text="@string/settled_matches"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/text_team_match_unsettled_matches"
+                android:layout_width="115dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center_vertical|left"
+                android:background="@drawable/background_matches_unset_not_selected"
+                android:clickable="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="toggleMatchShow"
+                android:text="@string/unsettled_matches"
+                android:textColor="@color/black" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background_light" >
+
+        <FrameLayout
+            android:id="@+id/frame_team_match_settled"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/list_team_match_settled"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerPadding="0dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_fragment_team_match_guide_settled"
+                style="@style/GuideLinear" >
+
+                <ImageView
+                    style="@style/GuideImage"
+                    android:src="@drawable/guide_team_match" />
+
+                <TextView
+                    style="@style/GuideText"
+                    android:text="@string/guide_team_match_settled" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_team_match_unsettled"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/list_team_match_unsettled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_matches_unset"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_fragment_team_match_guide_unsettled"
+                style="@style/GuideLinear" >
+
+                <ImageView
+                    style="@style/GuideImage"
+                    android:src="@drawable/guide_team_match" />
+
+                <TextView
+                    style="@style/GuideText"
+                    android:text="@string/guide_team_match_unsettled" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

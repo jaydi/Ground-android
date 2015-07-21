@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_post_container"
+    style="@style/FullScreenContainer"
+    android:orientation="vertical"
+    tools:context=".PostActivity" >
+
+    <LinearLayout
+        style="@style/WideScreenContainer"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|top"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/background_get_image_left"
+            android:onClick="capture"
+            android:src="@drawable/ic_camera" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|top"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/background_get_image_right"
+            android:onClick="album"
+            android:src="@drawable/ic_album" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image_post_preview"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:layout_gravity="right|center_vertical"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_post_message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_edit_post"
+        android:gravity="top"
+        android:hint="@string/post_hint"
+        android:inputType="textMultiLine"
+        android:padding="10dp" />
+
+</LinearLayout>

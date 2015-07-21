@@ -1,0 +1,126 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".TeamMainActivity" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <FrameLayout
+                android:id="@+id/team_board_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_light" />
+
+            <FrameLayout
+                android:id="@+id/team_match_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_light"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:id="@+id/team_match_search_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_light"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:id="@+id/team_info_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_light"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/foreground_horizontal_shadow" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp" >
+
+            <LinearLayout
+                android:id="@+id/linear_team_main_menu_board"
+                style="@style/TeamMenu"
+                android:onClick="onClickBoard" >
+
+                <ImageView
+                    android:id="@+id/image_team_main_icon_board"
+                    style="@style/TeamMenuIcon"
+                    android:src="@drawable/ic_team_board" />
+
+                <TextView
+                    android:id="@+id/text_team_main_menu_text_board"
+                    style="@style/TeamMenuText"
+                    android:text="@string/team_menu_board" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_team_main_menu_match"
+                style="@style/TeamMenu"
+                android:onClick="onClickMatch" >
+
+                <ImageView
+                    android:id="@+id/image_team_main_icon_match"
+                    style="@style/TeamMenuIcon"
+                    android:src="@drawable/ic_team_match" />
+
+                <TextView
+                    android:id="@+id/text_team_main_menu_text_match"
+                    style="@style/TeamMenuText"
+                    android:text="@string/team_menu_match" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_team_main_menu_match_search"
+                style="@style/TeamMenu"
+                android:onClick="onClickMatchSearch" >
+
+                <ImageView
+                    android:id="@+id/image_team_main_icon_match_search"
+                    style="@style/TeamMenuIcon"
+                    android:src="@drawable/ic_team_info" />
+
+                <TextView
+                    android:id="@+id/text_team_main_menu_text_match_search"
+                    style="@style/TeamMenuText"
+                    android:text="@string/team_menu_match_search" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_team_main_menu_info"
+                style="@style/TeamMenu"
+                android:onClick="onClickInfo" >
+
+                <ImageView
+                    android:id="@+id/image_team_main_icon_info"
+                    style="@style/TeamMenuIcon"
+                    android:src="@drawable/ic_team_info" />
+
+                <TextView
+                    android:id="@+id/text_team_main_menu_text_info"
+                    style="@style/TeamMenuText"
+                    android:text="@string/team_menu_info" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        style="@style/DrawerMenu" />
+
+</android.support.v4.widget.DrawerLayout>

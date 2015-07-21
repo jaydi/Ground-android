@@ -1,0 +1,429 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullScreenContainer"
+    android:orientation="vertical"
+    tools:context=".MatchShowActivity" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="210dp" >
+
+        <ImageView
+            android:id="@+id/image_match_show_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/linear_match_show_team_emblems"
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <FrameLayout
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:onClick="showHomeTeamInfo" >
+
+                    <ImageView
+                        android:id="@+id/image_match_show_home"
+                        android:layout_width="99dp"
+                        android:layout_height="99dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_team" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/foreground_circle_border" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/text_match_show_versus_1"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/versus"
+                    android:textColor="@color/gray"
+                    android:textSize="36sp" />
+
+                <FrameLayout
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:onClick="showAwayTeamInfo" >
+
+                    <ImageView
+                        android:id="@+id/image_match_show_away"
+                        android:layout_width="99dp"
+                        android:layout_height="99dp"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_team" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/foreground_circle_border" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_match_show_scoreboard"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <FrameLayout
+                    android:id="@+id/frame_match_show_home_score"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:onClick="setScore" >
+
+                    <ImageView
+                        android:id="@+id/image_match_show_home_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:id="@+id/text_match_show_home_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/white"
+                        android:textSize="82sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/text_match_show_versus_2"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="false"
+                    android:text="@string/colon"
+                    android:textColor="@color/black"
+                    android:textSize="82sp" />
+
+                <FrameLayout
+                    android:id="@+id/frame_match_show_away_score"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:onClick="setScore" >
+
+                    <ImageView
+                        android:id="@+id/image_match_show_away_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:id="@+id/text_match_show_away_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/white"
+                        android:textSize="82sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top" >
+
+                <TextView
+                    android:id="@+id/text_match_show_home"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:background="@color/double_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp" />
+
+                <TextView
+                    android:id="@+id/text_match_show_away"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:background="@color/double_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_match_show_member_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <LinearLayout
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_members" />
+
+                    <TextView
+                        android:id="@+id/text_match_show_home_member_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_members" />
+
+                    <TextView
+                        android:id="@+id/text_match_show_away_member_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonbar_match_show_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/button_match_show_chatting"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:onClick="chatting"
+                    android:text="@string/chatting"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_match_show_accept"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="accept"
+                    android:text="@string/accept"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_match_show_reject"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="reject"
+                    android:text="@string/reject"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_match_show_cancel"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:onClick="cancel"
+                    android:text="@string/cancel_request"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_match_show_send_record"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="sendRecord"
+                    android:text="@string/send_record"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_match_show_sent_record"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/sent_record"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_match_show_accept_record"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="acceptRecord"
+                    android:text="@string/accept"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_match_show_adjust_record"
+                    style="@style/MatchActionButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="adjustRecord"
+                    android:text="@string/adjust"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_match_show_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:textSize="48sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        style="@style/PaddedWideScreenContainer"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background_dim"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="3dp" >
+
+            <LinearLayout style="@style/TextBox" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/time"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_match_show_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/TextBox" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/ground"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_match_show_location"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_match_show_location_map"
+                style="@style/InputMap"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_match_show_join_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/button_match_show_start_survey"
+                style="@style/StrongButton"
+                android:layout_gravity="bottom"
+                android:drawableLeft="@drawable/ic_members"
+                android:onClick="startSurvey"
+                android:text="@string/start_survey"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/buttonbar_match_show_survey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:visibility="gone" >
+
+                <Button
+                    style="@style/StrongButton"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_positive_white"
+                    android:onClick="join"
+                    android:text="@string/join" />
+
+                <Button
+                    style="@style/StrongButton"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_negative_white"
+                    android:onClick="notJoin"
+                    android:text="@string/not_join" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_match_show_join_status"
+                style="@style/StrongButton"
+                android:layout_gravity="bottom"
+                android:onClick="showSurvey"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

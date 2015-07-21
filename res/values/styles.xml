@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="NoDim" parent="AppBaseTheme">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/background_action_bar</item>
+        <item name="android:titleTextStyle">@style/CustomActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="CustomActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- basic containers -->
+
+    <style name="WideScreenContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FullScreenContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="PaddedWideScreenContainer" parent="WideScreenContainer">
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="PaddedFullScreenContainer" parent="FullScreenContainer">
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <!-- basic components -->
+
+    <style name="DrawerMenu">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:divider">@color/background_dim</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:listSelector">@color/background_light</item>
+    </style>
+
+    <style name="BasicButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@drawable/selector_button_basic</item>
+    </style>
+
+    <style name="StrongButton" parent="BasicButton">
+        <item name="android:background">@drawable/selector_button_green</item>
+    </style>
+
+    <style name="MatchActionButton" parent="BasicButton">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/selector_button_match_action</item>
+    </style>
+
+    <style name="TabButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">78dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="TabButtonSelected" parent="TabButton">
+        <item name="android:background">@drawable/background_tab_selected</item>
+    </style>
+
+    <style name="TabButtonNotSelected" parent="TabButton">
+        <item name="android:background">@drawable/background_tab_not_selected</item>
+    </style>
+
+    <style name="InputBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/background_input_box</item>
+    </style>
+
+    <style name="InputBoxWhite" parent="InputBox">
+        <item name="android:background">@drawable/background_input_box_white</item>
+    </style>
+
+    <style name="MessageBoxWhite" parent="InputBox">
+        <item name="android:background">@drawable/background_message_box</item>
+    </style>
+
+    <style name="MessageBoxWhiteMine" parent="InputBox">
+        <item name="android:background">@drawable/background_message_box_mine</item>
+    </style>
+
+    <style name="InputMap" parent="InputBox">
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:layout_height">150dp</item>
+    </style>
+
+    <style name="EditText" parent="InputBox">
+        <item name="android:background">@drawable/background_edit_text</item>
+    </style>
+
+    <style name="SearchBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/background_search_box</item>
+        <item name="android:drawableStart">@drawable/ic_search</item>
+    </style>
+
+    <style name="TextBox" parent="InputBox">
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/background_text_box</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="ListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">13dp</item>
+        <item name="android:background">@drawable/background_list_item</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="TextItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@drawable/background_text_box</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <!-- Door -->
+    <style name="DoorImageEmail">
+        <item name="android:layout_width">121dp</item>
+        <item name="android:layout_height">108dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="DoorImageSignUp">
+        <item name="android:layout_width">134dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="DoorImageQuestionMark">
+        <item name="android:layout_width">121dp</item>
+        <item name="android:layout_height">153dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <!-- team pages -->
+
+    <style name="TeamMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/background_light</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="TeamMenuIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">27dp</item>
+    </style>
+
+    <style name="TeamMenuText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="MemberGridBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+
+    <style name="MemberGridBoxImage">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="MemberGridBoxName">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="MatchTimeInfoBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+
+    <style name="MatchTimeInfoDay">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:textSize">29sp</item>
+    </style>
+
+    <style name="MatchTimeInfoDate">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:gravity">center_horizontal|top</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="MatchInfoBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="MatchInfoIcon">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="MatchInfoText">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:padding">3dp</item>
+    </style>
+
+    <style name="MatchStatusIcon">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="MatchStatusText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <!-- Guide Contents -->
+    <style name="GuideLinear">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="GuideImage">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="GuideText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textColor">@color/background_dark</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/FullScreenContainer"
+    android:background="@color/background_dim" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list_fragment_team_board_posts"
+        style="@style/FullScreenContainer"
+        android:divider="@null"
+        android:dividerPadding="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linear_fragment_team_board_guide"
+        style="@style/GuideLinear" >
+
+        <ImageView
+			style="@style/GuideImage"
+            android:src="@drawable/guide_team_board" />
+
+        <TextView
+			style="@style/GuideText"
+            android:text="@string/guide_team_board" />
+    </LinearLayout>
+
+</FrameLayout>

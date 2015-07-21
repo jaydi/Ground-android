@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/PaddedFullScreenContainer"
+    android:orientation="vertical"
+    tools:context="anb.ground.activity.SignUpFragment" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            style="@style/DoorImageSignUp"
+            android:src="@drawable/ic_signup" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edit_sign_up_email"
+        style="@style/EditText"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edit_sign_up_password"
+        style="@style/EditText"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edit_sign_up_confirm"
+        style="@style/EditText"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/button_sign_up_signup"
+        style="@style/BasicButton"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="nextStep"
+        android:text="@string/next_step" />
+
+</LinearLayout>
